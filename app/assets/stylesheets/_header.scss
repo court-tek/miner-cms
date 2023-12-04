@@ -4,24 +4,25 @@
     top: 0;
     left: 0;
     right: 0;
-    background-color: var(--fito-red);
+    background-color: #EDEDEC;
     padding: 25px 0 20px 0;
     transition: all .6s ease-in-out;
     z-index: 50;
+    border-bottom: 3px solid var(--fito-red);
     .header__logo-container {
-        display: inline-block;
-        font-weight: 700;
-        font-size: 1.5rem;
-        text-transform: capitalize;
+      display: inline-block;
+      font-weight: 700;
+      font-size: 1.5rem;
+      text-transform: capitalize;
       a {
         text-decoration: none;
-        color: var(--blanco);
+        color: var(--negro);
       }
     }
     .ti-menu {
       display: inline-block;
       float: right;
-      color: var(--blanco);
+      color: var(--negro);
       font-size: 30px;
     }
   
@@ -31,8 +32,11 @@
     &.sticky {
       padding: 30px 0;
       background-color: var(--fito-red);
+      border: none;
       .header__logo-container {
-        color: var(--blanco);
+        a {
+          color: var(--blanco);
+        }
       }
       .ti-menu {
         
@@ -76,6 +80,7 @@
       z-index: 50;
       .header__logo-container {
         h1 {
+
         }
       }
   
@@ -87,7 +92,7 @@
         display: inline-block;
         float: right;
         a {
-          color: var(--blanco);
+          color: var(--negro);
           padding: 0 27px;
           text-transform: capitalize;
           font-weight: 500;
@@ -105,7 +110,7 @@
         padding: 30px 0;
         background-color: var(--fito-red);
         .header__logo-container {
-          color: var(--blanco);
+          color: var(--negro) ;
         }
         nav {
           a {
