@@ -35,6 +35,10 @@
             text-transform: uppercase;
             font-weight: 600;
             text-decoration: none;
+            transition: all 0.5s ease-in-out;
+            &:hover {
+                color: var(--fito-red);
+            }
         }
     }
 
@@ -45,11 +49,20 @@
         font-size: clamp(1rem, 4vw, 1.1rem);;
         color: var(--text-grey);
     }
+
+    .menu__disclaimer {
+        color: var(--text-grey);
+    }
 }
   
 // This applies from 768px onwards
 @media (min-width: 768px) {
-   
+   #menu {
+    .menu__items {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.50rem;
+    }
+   }
 }
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {}
