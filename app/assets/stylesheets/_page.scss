@@ -11,22 +11,29 @@
     }
 
     .menu__heading {
-        font-size: clamp(1.1rem, 4vw, 2.6rem);
+        font-size: clamp(1.6rem, 4vw, 2.6rem);
         font-family: var(--dm-serif-display);
+        text-transform: capitalize;
         text-align: center;
+        margin: 0 0 30px 0;
     }
+
     .menu__items {
         display: grid;
+        grid-template-columns: 1fr;
         gap: 1.1rem;
+        margin-bottom: 5rem;
     }
 
     .menu__item-title {
         font-size: 1rem;
         font-family: var(--dm-sans);
         text-align: center;
+        margin-bottom: 8px;
         a {
-            color: var(--fito-red);
+            color: var(--negro);
             text-transform: uppercase;
+            font-weight: 600;
             text-decoration: none;
         }
     }
@@ -35,7 +42,8 @@
         font-weight: 400;
         font-family: var(--dm-serif-display);
         text-align: center;
-        font-size: 1.1rem;
+        font-size: clamp(1rem, 4vw, 1.1rem);;
+        color: var(--text-grey);
     }
 }
   
@@ -44,7 +52,7 @@
    
 }
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) { }
+@media (min-width: 992px) {}
   
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { }
+@media (min-width: 1200px) {}
