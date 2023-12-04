@@ -22,12 +22,15 @@
     --fondo-grey: #EDEDEC;
 
     // fonts
-    --lato: 'Lato', sans-serif;
-    --playfair-display: 'Playfair Display', serif;
+    --dm-sans: 'DM Sans', sans-serif;
+    --dm-serif-display: 'DM Serif Display', serif;
+
+    // gradients
+    --fire-house: linear-gradient(to right, #640809, #751112, #871919, #992220, #ac2a28);
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: var(--dm-sans);
     color: #1e1e1e;
     background-color: var(--fondo-grey);
 }
@@ -48,4 +51,8 @@ footer {
     background: var(--fito-red); /* old browsers */
     background: rgb(237,75,82);
     background: linear-gradient(90deg, rgba(237,75,82,1) 0%, rgba(237,75,82,1) 100%, rgba(156,27,36,1) 100%);
+}
+
+@mixin gradient2 {
+    background-image: linear-gradient(to right, #640809, #751112, #871919, #992220, #ac2a28);
 }

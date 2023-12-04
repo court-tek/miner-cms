@@ -1,11 +1,17 @@
 <section class="container">
-  <h1>New page</h1>
+  <div class="row">
+    <div class="col-sm-12">
+      <div id="menu">
+        <h1 class="menu__heading">New item</h1>
 
-  <%= render "form", page: @page %>
+        <%= render "form", page: @page %>
 
-  <br>
+        <br>
 
-  <div>
-    <%= link_to "Back to pages", pages_path %>
+        <div>
+          <%= link_to "Back to pages", pages_path, class: "menu__previous-page" %>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
