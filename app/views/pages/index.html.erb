@@ -1,13 +1,20 @@
 <div class="container">
-  <p style="color: green"><%= notice %></p>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="menu">
+        <p class="menu__success-notice"><%= notice %></p>
 
-  <h1>Pages</h1>
+        <h1 class="menu__heading">Dinner Menu</h1>
 
-  <div id="pages">
-    <% @pages.each do |page| %>
-      <%= render page %>
-    <% end %>
+        <div id="menu__items">
+          <% @pages.each do |page| %>
+            <%= render page %>
+          <% end %>
+        </div>
+
+        <%= link_to "Add item", new_page_path, class: "menu__add-item-btn" %>
+      </div>
+    </div>
   </div>
-
-  <%= link_to "New item", new_page_path %>
 </div>
+  
