@@ -1,11 +1,13 @@
-<p style="color: green"><%= notice %></p>
+<div class="container">
+  <p style="color: green"><%= notice %></p>
 
-<h1>Pages</h1>
+  <h1>Pages</h1>
 
-<div id="pages">
-  <% @pages.each do |page| %>
-    <%= render page %>
-  <% end %>
+  <div id="pages">
+    <% @pages.each do |page| %>
+      <%= render page %>
+    <% end %>
+  </div>
+
+  <%= link_to "New item", new_page_path %>
 </div>
-
-<%= link_to "New page", new_page_path %>

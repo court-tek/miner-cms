@@ -1,0 +1,98 @@
+// This applies from 0px to 768
+#footer {
+    .footer__top {
+        background-color: var(--fito-red);
+        padding: 20px 0;
+        text-align: center;
+        .footer__header {
+            color: var(--blanco);
+            text-transform: uppercase;
+
+        }
+
+        .footer__sub-heading {
+            color: var(--blanco);
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.5rem;
+            margin: 20px auto;
+            .form-control {
+                label {
+                    display: block;
+                }
+                input {
+                    width: 100%;
+                }
+            }
+
+            .form-control__checkbox {
+                display: grid;
+                grid-template-columns: 1fr 15fr;
+            }
+
+            .checkbox-label {
+                color: var(--blanco);
+                font-size: 0.9rem;
+            }
+        }
+    }
+    
+    .footer__bottom {
+        background-color: var(--negro);
+        color: var(--text-grey);
+        padding: 20px 0;
+        text-align: center;
+        .footer__logo-container {
+            a {
+                color: var(--text-grey);
+                text-decoration: none;
+                font-size: 1.5rem;
+            }
+        }
+        nav {
+            a {
+                color: var(--text-grey);
+                text-decoration: none;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+  
+// This applies from 768px onwards
+@media (min-width: 768px) {
+    #footer {
+        .footer__top {
+            background-color: var(--fito-red);
+            form {
+                grid-template-columns: 1fr 1fr;
+                width: 375px;
+                margin: 20px auto;
+                .form-control {
+                    display: grid;
+                }
+
+                .form-control__checkbox {
+                    display: grid;
+                    grid-template-columns: 1fr 15fr;
+                }
+
+                .form-control--full-width {
+                    grid-column: 1 / -1;
+                }
+
+                .checkbox-label {
+                    color: var(--blanco);
+                }
+            }
+        }
+    }
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { }
+  
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { }

@@ -13,6 +13,7 @@
 
     // app colores
     --space-grey: #7a8d99;
+    --text-grey: #999999;
     --metal-blue: #0971ce;
     --galaxy-grey: #525e66;
     --fito-red: #ed4852;
@@ -28,21 +29,19 @@
 body {
     font-family: 'Lato', sans-serif;
     color: #1e1e1e;
-    min-height: 100%;
-    display: grid;
-    grid-template-rows: 1fr auto;
-}
-
-footer {
-    grid-row-start: 2;
-    grid-row-end: 3;
 }
 
 .heading {
     font-family: 'Playfair Display', serif;
 }
 
+#content {
+    min-height: calc(100vh - 70px);
+}
 
+footer {
+    height: 50px;
+}
 // mixins
 @mixin gradient1 {
     background: var(--fito-red); /* old browsers */

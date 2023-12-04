@@ -1,6 +1,21 @@
 // This applies from 0px to 768
 #header {
-
+    background-color: var(--fito-red);
+    padding: 20px 0;
+    .header__logo-container {
+        a {
+            color: var(--blanco);
+            text-decoration: none;
+        }
+    }
+    
+    .ti-menu {
+        color: var(--blanco);
+    }
+    
+    nav {
+        display: none;
+    }
 }
   
 // This applies from 768px onwards
@@ -9,6 +24,12 @@
         background: var(--fito-red);
         padding-top: 30px;
         min-height: 70px;
+        .ti-menu {
+            display: none;
+        }
+        nav {
+            display: block;
+        }
     }
 }
 // Large devices (desktops, 992px and up)

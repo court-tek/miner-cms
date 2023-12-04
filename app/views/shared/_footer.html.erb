@@ -1,0 +1,55 @@
+<footer id="footer">
+    <div class="footer__top">
+        <div class="container">
+            <h1 class="footer__header">email sign-up</h1>
+            <p class="footer__sub-heading">
+                Keep up with what’s happening at Ruth’s Chris, from exclusive events, new menu items, promotions and more.
+            </p>
+            <%= form_with do |form| %>
+                <div class="form-control">
+                    <%= form.text_field :first_name, placeholder: "first name" %>
+                </div>
+
+                <div class="form-control">
+                    <%= form.text_field :last_name, placeholder: "last name" %>
+                </div>
+
+                <div class="form-control form-control--full-width">
+                    <%= form.text_field :email_address, placeholder: "email address" %>
+                </div>
+
+                <div class="form-control form-control__checkbox form-control--full-width">
+                    <%= form.check_box :pet_dog %>
+                    <%= form.label :pet_dog, "I agree to receive emails from Fitos Steak House.", class: "checkbox-label" %>
+                </div>
+
+                <div class="form-control form-control--full-width">
+                    <%= form.submit "subscribe" %>
+                </div>
+            <% end %>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="footer__logo-container">
+                <%= link_to root_path do %>
+                    <h1>fitos steak</h1>
+                <% end %>
+            </div>
+            <nav>
+                <a href="">food</a>
+                <a href="">about us</a>
+                <a href="">waitlist</a>
+                <a href="">offers</a>
+            </nav>
+            <div class="footer__social-media">
+                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            </div>
+            <p class="copyright">
+                &copy; 2023 suite concepts, inc. all rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>
