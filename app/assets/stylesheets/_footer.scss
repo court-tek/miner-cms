@@ -9,11 +9,12 @@
             text-transform: uppercase;
             font-size: clamp(1rem, 4vw, 1.4rem);
             font-weight: 700;
-
+            margin: 0 0 22px 0;
         }
 
         .footer__sub-heading {
             color: var(--blanco);
+            margin: 0 0 24px 0;
         }
 
         form {
@@ -65,17 +66,24 @@
         padding: 20px 0;
         text-align: center;
         .footer__logo-container {
+            margin-bottom: 24px;
             a {
                 color: var(--text-grey);
                 text-decoration: none;
                 font-size: 1.5rem;
+                text-transform: capitalize;
             }
         }
         nav {
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
             a {
                 color: var(--text-grey);
                 text-decoration: none;
-                font-size: 1.5rem;
+                font-size: 0.9rem;
+                text-transform: uppercase;
+                margin: 10px 0;
             }
         }
     }
