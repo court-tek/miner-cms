@@ -43,6 +43,9 @@
                     padding: 14px 20px;
                     margin: 8px 0;
                     border: none;
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    font-weight: 700;
                     border-radius: 4px;
                     cursor: pointer;
                 }
@@ -78,12 +81,26 @@
             margin-bottom: 2rem;
             display: flex;
             flex-direction: column;
+            justify-content: center;
             a {
                 color: var(--text-grey);
                 text-decoration: none;
                 font-size: 0.9rem;
                 text-transform: uppercase;
                 margin: 10px 0;
+            }
+        }
+        .footer__social-media {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            i {
+                margin: 0 14px;
+                font-size: 1.8rem;
+                transition: color 0.5s ease-in-out;
+                &:hover {
+                    color: var(--fito-red);
+                }
             }
         }
     }
@@ -112,6 +129,51 @@
 
                 .checkbox-label {
                     color: var(--blanco);
+                }
+            }
+        }
+        .footer__bottom {
+            nav {
+                margin: 2rem auto;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                a {
+                    color: var(--text-grey);
+                    text-decoration: none;
+                    font-size: 0.9rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    margin: 0 10px;
+                    transition: all 0.5s ease-in-out;
+                    &:hover {
+                        color: var(--fito-red);
+                    }
+                }
+            }
+
+            .footer__social-media {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 20px;
+                i {
+                    margin: 0 14px;
+                    font-size: 1.8rem;
+                    transition: color 0.5s ease-in-out;
+                    &:hover {
+                        color: var(--fito-red);
+                    }
+                }
+            }
+
+            .copyright {
+                font-size: 0.9rem;
+                .footer__parent-link {
+                    cursor: pointer;
+                    transition: color 0.5s ease-in-out;
+                    &:hover {
+                        color: var(--fito-red);
+                    }
                 }
             }
         }
