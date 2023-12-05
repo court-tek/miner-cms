@@ -1,0 +1,120 @@
+// This applies from 0px to 768px or mobile
+.banner {
+    height: 430px;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), #000);
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.2), #000), url('AdobeStock_162254112.jpeg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    .banner__title {
+        padding: 130px 0 80px;
+        text-align: right;
+        h5 {
+            color: var(--blanco);
+            padding: 0 0 20px 0;
+            text-transform: uppercase;
+        }
+        h1 {
+            text-transform: uppercase;
+            color: var(--blanco);
+            font-weight: 500;
+            // clamp (min, cur, upper)
+            font-size: clamp(2rem, 6vw ,3.5rem);
+        }
+    }
+
+    .banner__contact-info {       
+        color: var(--blanco);
+        text-align: right;
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+
+        .banner__booking {
+            padding: 0 0 20px 0;
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+        h2 {
+            // clamp (min, cur, max)
+            font-size: clamp(1.3rem, 4vw, 2rem);
+            margin-bottom: 20px;
+        }
+        .banner__hours {
+            text-transform: capitalize;
+            .banner__line-break {
+                display: block;
+            }
+            .banner__divider {
+                display: none;
+            }
+        }
+    }
+    
+}
+
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .banner {
+        height: 50vh;
+        .banner__title {
+            padding: 200px 0 85px;
+            text-align: right;
+            h5 {
+                color: var(--blanco);
+                padding: 0 0 20px 0;
+                text-transform: uppercase;
+            }
+            h1 {
+                text-transform: uppercase;
+                color: var(--blanco);
+                font-weight: 600;
+                // clamp (min, cur, upper)
+                font-size: clamp(2rem, 6vw ,3.5rem);
+            }
+        }
+
+        .banner__contact-info {       
+            color: var(--blanco);
+            text-align: right;
+            font-size: 0.9rem;
+            line-height: 1.5rem;
+
+            .banner__booking {
+                padding: 0 0 20px 0;
+                font-weight: 500;
+                text-transform: capitalize;
+            }
+            strong {
+                font-weight: 700;
+            }
+            h2 {
+                // clamp (min, cur, max)
+                font-size: clamp(1.3rem, 4vw, 2rem);
+                margin-bottom: 20px;
+            }
+            .banner__hours {
+                .banner__line-break {
+                    display: none;
+                }
+                .banner__divider {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+    .banner {
+        height: 100vh;
+        .banner__title {
+            padding: 200px 0 200px;
+        }
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { }

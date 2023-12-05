@@ -1,0 +1,64 @@
+<%= render "shared/header" %>
+<section class="banner">
+    <div class="container banner-wrapper-fixed">
+        <div class="banner__title">
+            <h5>welcome</h5>
+            <h1 class="heading">prime steak</h1>
+        </div>
+        <div class="banner__contact-info">
+            <div class="banner__booking">book table directly</div>
+            <h2>(718) - 218 - 8688</h2>
+            <div class="banner__hours">
+                opening: <strong>mon - fri:</strong> 9am - 10pm <br class="banner__line-break"> <span class="banner__divider">/</span>
+                <strong>weekends:</strong> 9am - 12pm
+            </div>
+        </div>
+    </div>
+</section>
+<section class="information">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 information__para">
+                <h2 class="heading">We Started The Franchise In 1987</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos iure et dolores. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem aspernatur eos delectus odit maxime nesciunt cum explicabo, neque asperiores perspiciatis esse unde, consequatur ratione distinctio facilis dolorum doloribus eius. Ducimus.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos iure et dolores. Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                <%= link_to "#" do %>
+                    <span>learn more about restaurants</span>
+                    <div class="information__about-link">
+                        <i class="fa fa-chevron-right"></i>
+                    </div>
+                <% end %>
+            </div>
+            <div class="col-md-6 information__image">
+                <%= image_tag "pexels-edward-eyer-687824.jpg", class: "information__side-image" %>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="foodpreview">
+    <div class="container">
+        <div class="col-sm-12">
+            <h2>We have everything you need to kill your hunger</h2>
+            <div class="foodpreview__button-rounded">view our menu</div>
+            <button id="prev-slide" class="foodpreview__slide-btn">
+                <i class="ti-angle-left"></i>
+            </button>
+            <div class="foodpreview__food-slider">
+                        <div class="foodpreview__slide">
+                            <div class="foodpreview__background--hover-efx"></div>
+                            <div class="foodpreview__content">
+                                <div class="foodpreview__food-title">
+                                </div>
+                                <p class="foodpreview__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, quo reprehenderit quia cupiditate iste voluptatibus autem officia lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur excepturi inventore quos dolores aliquam.</p>
+                                <div class="foodpreview__food-image">
+                                    burger
+                                </div>
+                            </div>
+                        </div>
+            </div>
+            <button id="next-slide" class="foodpreview__slide-btn">
+                <i class="ti-angle-right"></i>
+            </button>
+        </div>
+    </div>
+</section>
