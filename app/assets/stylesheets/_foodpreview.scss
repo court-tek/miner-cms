@@ -23,7 +23,7 @@
             padding: 20px;
             border-radius: 30px;
             text-transform: capitalize;
-            margin-bottom: 120px;
+            margin-bottom: 40px;
             cursor: pointer;
         }
 
@@ -37,20 +37,6 @@
                 width: 100%;
                 position: relative;
                 height: 500px;
-                &:hover {
-                    .foodpreview__background--hover-efx {
-                        background: var(--burger-orange);
-                        transform: translate3d(0, -100px, 0);
-                    }
-                    .foodpreview__content {
-                        .foodpreview__food-title {
-                            color: var(--blanco);
-                        }
-                        .foodpreview__description {
-                            color: var(--blanco);
-                        }
-                    }
-                }
                 .foodpreview__background--hover-efx {
                     background: var(--blanco);
                     height: 100%;
