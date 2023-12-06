@@ -6,17 +6,17 @@ class LandingController < ApplicationController
             {
                 :title => "dinner",
                 :description => "",
-                :image => ""
+                :image => "AdobeStock_614278896.png"
             },
             {
                 :title => "cocktails & wine",
                 :description => "",
-                :image => ""
+                :image => "AdobeStock_603862206_Preview.png"
             },
             {
                 :title => "children's",
                 :description => "",
-                :image => ""
+                :image => "AdobeStock_627813906_Preview.png"
             },
         ]
     end

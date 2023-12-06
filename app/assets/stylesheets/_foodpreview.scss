@@ -116,7 +116,14 @@ h2 {
 }
 
 // This applies from 768px onwards
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+        .foodpreview {
+            .foodpreview__food-slider {
+                margin: 0 0 80px 0;
+                grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) { }
