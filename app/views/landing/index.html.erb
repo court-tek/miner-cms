@@ -38,18 +38,16 @@
 <section class="foodpreview">
     <div class="container">
         <div class="col-sm-12">
-            <h2>We have everything you need to kill your hunger</h2>
+            <div class="foodpreview__flex">
+            <h2>We have everything you need to kill your hunger.</h2>
             <div class="foodpreview__button-rounded">view our menu</div>
-            <button id="prev-slide" class="foodpreview__slide-btn">
-                <i class="ti-angle-left"></i>
-            </button>
             <div class="foodpreview__food-slider">
                 <% @preview.each do |prev| %>
                     <div class="foodpreview__slide">
                         <div class="foodpreview__background--hover-efx"></div>
                         <div class="foodpreview__content">
                             <div class="foodpreview__food-title">
-                                <%= prev[:title] %>
+                                <%= link_to prev[:title] %>
                             </div>
                             <p class="foodpreview__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, quo reprehenderit quia cupiditate iste voluptatibus autem officia lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur excepturi inventore quos dolores aliquam.</p>
                             <div class="foodpreview__food-image">
@@ -59,9 +57,7 @@
                     </div>
                 <% end %>
             </div>
-            <button id="next-slide" class="foodpreview__slide-btn">
-                <i class="ti-angle-right"></i>
-            </button>
+            </div>
         </div>
     </div>
 </section>
