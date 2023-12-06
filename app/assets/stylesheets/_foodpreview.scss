@@ -8,7 +8,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding: 30px 0 0 0;
+        padding: 30px 0 30px 0;
         h2 {
             font-size: 1.4rem;
             font-weight: 700;
@@ -58,9 +58,12 @@
                     .foodpreview__food-title {
                         font-size: 1.5rem;
                         text-transform: capitalize;
-                        font-weight: 900;
                         margin-bottom: 3rem;
-                        color: var(--fito-red);
+                        a {
+                            color: var(--fito-red);
+                            font-weight: 900;
+                            text-decoration: none;
+                        }
                     }
                     .foodpreview__description {
                         font-size: 0.9rem;
@@ -83,7 +86,7 @@
 @media (min-width: 768px) {
     .foodpreview {
         .foodpreview__flex {
-            padding: 40px 0 0 0;
+            padding: 40px 0 40px 0;
             h2 {
                 font-size: 2.4rem;
             }
