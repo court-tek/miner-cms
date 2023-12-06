@@ -4,11 +4,10 @@
     top: 0;
     left: 0;
     right: 0;
-    background-color: #EDEDEC;
+    background-color: transparent;
     padding: 25px 0 20px 0;
     transition: all .6s ease-in-out;
     z-index: 50;
-    border-bottom: 3px solid var(--fito-red);
     .header__logo-container {
       display: inline-block;
       font-weight: 700;
@@ -16,13 +15,13 @@
       text-transform: capitalize;
       a {
         text-decoration: none;
-        color: var(--negro);
+        color: var(--blanco);
       }
     }
     .ti-menu {
       display: inline-block;
       float: right;
-      color: var(--negro);
+      color: var(--blanco);
       font-size: 30px;
     }
   
