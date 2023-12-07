@@ -8,6 +8,7 @@
     padding: 25px 0 20px 0;
     transition: all .6s ease-in-out;
     z-index: 50;
+    // border-bottom: 3px solid var(--fito-red);
     .header__logo-container {
       display: inline-block;
       font-weight: 700;
@@ -44,14 +45,16 @@
   }
   
   #pages-header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background-color: var(--fito-red);
-    padding: 20px 0;
+    background-color: var(--space-grey);
+    padding: 25px 0 20px 0;
+    transition: all .6s ease-in-out;
     z-index: 50;
-    .pages-header__logo-container {
+    border-bottom: 3px solid var(--fito-red);
+    .header__logo-container {
       display: inline-block;
       font-weight: 700;
       font-size: 1.5rem;
@@ -67,8 +70,22 @@
       color: var(--blanco);
       font-size: 30px;
     }
+  
     nav {
       display: none;
+    }
+    &.sticky {
+      padding: 30px 0;
+      background-color: var(--fito-red);
+      border: none;
+      .header__logo-container {
+        a {
+          color: var(--blanco);
+        }
+      }
+      .ti-menu {
+        
+      }
     }
   }
   
@@ -91,7 +108,7 @@
         display: inline-block;
         float: right;
         a {
-          color: var(--negro);
+          color: var(--blanco);
           padding: 0 27px;
           text-transform: capitalize;
           font-weight: 500;
@@ -120,40 +137,46 @@
     }
   
     #pages-header {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      background-color: var(--fito-red);
-      padding: 20px 0;
+      background-color: var(--space-grey);
+      padding: 25px 0 20px 0;
+      transition: all .6s ease-in-out;
       z-index: 50;
-      .pages-zheader__logo-container {
+      border-bottom: 3px solid var(--fito-red);
+      .header__logo-container {
         display: inline-block;
-        color: var(--blanco);
         font-weight: 700;
         font-size: 1.5rem;
         text-transform: capitalize;
-        width: 20px;
+        a {
+          text-decoration: none;
+          color: var(--blanco);
+        }
       }
       .ti-menu {
-        display: none;
-      }
-      nav {
         display: inline-block;
         float: right;
-        a {
-          color: var(--blanco);
-          padding: 0 27px;
-          text-transform: capitalize;
-          font-weight: 500;
-          text-decoration: none;
-          -webkit-transition: padding 0.4s linear 0s;
-          transition: padding 0.4s linear 0s;
-          font-size: 17px;
-          line-height: 26px;
-          &:nth-child(5) {
-            padding-right: 0;
+        color: var(--blanco);
+        font-size: 30px;
+      }
+    
+      nav {
+        display: none;
+      }
+      &.sticky {
+        padding: 30px 0;
+        background-color: var(--fito-red);
+        border: none;
+        .header__logo-container {
+          a {
+            color: var(--blanco);
           }
+        }
+        .ti-menu {
+          
         }
       }
     }
