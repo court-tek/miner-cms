@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # resource pages
-  resources :pages
+  resources :pages, only: [:new, :show, :edit, :create, :update, :destroy]
 
   # Defines the pages path route ("/")
   get 'food', to: 'pages#index'
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "landing#index"
-  
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
