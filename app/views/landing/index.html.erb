@@ -39,24 +39,24 @@
     <div class="container">
         <div class="col-sm-12">
             <div class="foodpreview__flex">
-            <h2>We have everything you need to kill your hunger.</h2>
-            <div class="foodpreview__button-rounded">view our menu</div>
-            <div class="foodpreview__food-slider">
-                <% @preview.each do |prev| %>
-                    <div class="foodpreview__slide">
-                        <div class="foodpreview__background--hover-efx"></div>
-                        <div class="foodpreview__content">
-                            <div class="foodpreview__food-title">
-                                <%= link_to prev[:title] %>
-                            </div>
-                            <p class="foodpreview__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, quo reprehenderit quia cupiditate iste voluptatibus autem officia lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur excepturi inventore quos dolores aliquam.</p>
-                            <div class="foodpreview__food-image">
-                                <%= image_tag prev[:image] %>
+                <h2>We have everything you need to kill your hunger.</h2>
+                <div class="foodpreview__button-rounded">view our menu</div>
+                <div class="foodpreview__food-slider">
+                    <% @preview.each do |prev| %>
+                        <div class="foodpreview__slide">
+                            <div class="foodpreview__background--hover-efx"></div>
+                            <div class="foodpreview__content">
+                                <div class="foodpreview__food-title">
+                                    <%= link_to prev[:title] %>
+                                </div>
+                                <p class="foodpreview__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, quo reprehenderit quia cupiditate iste voluptatibus autem officia lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur excepturi inventore quos dolores aliquam.</p>
+                                <div class="foodpreview__food-image">
+                                    <%= image_tag prev[:image] %>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                <% end %>
-            </div>
+                    <% end %>
+                </div>
             </div>
         </div>
     </div>
