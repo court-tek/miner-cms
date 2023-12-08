@@ -6,16 +6,22 @@
     
     .menu__about-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 1.25rem;
         width: 100%;
 
         .menu__heading-sans {
             font-size: 1.8rem;
+            text-transform: uppercase;
+            margin-bottom: 1.2rem;
         }
 
         .menu__text-column {
-            max-width: 600px;            
+            max-width: 600px;
+            
+            .menu__text {
+                line-height: 1.5;
+            }
         }
         
         .menu__image-column {
@@ -30,9 +36,23 @@
 // This applies from 768px onwards
 @media (min-width: 768px) {
    #menu {
-    .menu__items {
-        grid-template-columns: 1fr 1fr;
-        gap: 1.50rem;
+    .menu__about-grid {
+        grid-template-columns: 1fr;
+
+        .menu__heading-sans {
+            font-size: 1.8rem;
+        }
+
+        // .menu__text-column {
+        //     max-width: 600px;            
+        // }
+        
+        // .menu__image-column {
+        //     img {
+        //         max-width: 600px;
+        //         width: 100%;
+        //     }
+        // }
     }
    }
 }
