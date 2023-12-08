@@ -1,0 +1,38 @@
+<div class="container">
+    <div id="menu">
+
+    </div>
+</div>
+
+
+<%
+=begin%>
+ <div class="promotions">
+                        <h1>packages & promotions</h1>
+                        <p class="subheading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat dolore aspernatur molestiae, repudiandae non in esse explicabo quaerat, enim voluptates aliquam mollitia dolor facilis distinctio sequi eveniet ad similique suscipit!</p>
+
+                        <div class="row">
+                            <% @promos.each do |promo| %>
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card__top">
+                                            <%= link_to "#" do %>
+                                                <%= image_tag "jed-owen-q6Y8Xr3SoQA-unsplash-640x426" %>
+                                            <% end %>
+                                        </div>
+                                        <div class="card__bottom spacing__bottom">
+                                            <h2 class="card__title">
+                                                <%= promo %>
+                                            </h2>
+                                            <p class="card__description">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium architecto fugiat, dolor, vero necessitatibus tenetur repellendus sint nesciunt aut omnis.
+                                            </p>
+                                            <button class="card__promo-button">learn more</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% end %>
+                        </div>
+                    </div> 
+<%
+=end%>
