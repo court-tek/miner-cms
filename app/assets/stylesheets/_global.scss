@@ -1,0 +1,58 @@
+:root {
+    // roygbiv
+    --rojo: #d10000;
+    --naranja: #ff6622;
+    --amrillo: #ffda21;
+    --verde: #33dd00;
+    --azul: #1133cc;
+    --indigo: #220066;
+    --violeta: #330044;
+    --negro: #111111;
+    --blanco: #fffffe;
+    
+
+    // app colores
+    --space-grey: #7a8d99;
+    --text-grey: #999999;
+    --metal-blue: #0971ce;
+    --galaxy-grey: #525e66;
+    --fito-red: #ed4852;
+    --burger-orange: #f59c2e;
+    --wild-berry: #002d77;
+    --fondo-grey: #EDEDEC;
+
+    // fonts
+    --dm-sans: 'DM Sans', sans-serif;
+    --dm-serif-display: 'DM Serif Display', serif;
+
+    // gradients
+    --fire-house: linear-gradient(to right, #640809, #751112, #871919, #992220, #ac2a28);
+}
+
+body {
+    font-family: var(--dm-sans);
+    color: #1e1e1e;
+    background-color: var(--fondo-grey);
+}
+
+.heading {
+    font-family: 'Playfair Display', serif;
+}
+
+#content {
+    min-height: calc(100vh - 70px);
+}
+
+footer {
+    height: 50px;
+}
+// mixins
+@mixin gradient1 {
+    background: var(--fito-red); /* old browsers */
+    background: rgb(237,75,82);
+    background: linear-gradient(90deg, rgba(237,75,82,1) 0%, rgba(237,75,82,1) 100%, rgba(156,27,36,1) 100%);
+}
+
+@mixin gradient2 {
+    background-image: linear-gradient(to right, #640809, #751112, #871919, #992220, #ac2a28);
+}

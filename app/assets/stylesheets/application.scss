@@ -1,1 +1,15 @@
 // Sassy
+@use "grid12";
+@use "reset";
+@use "global";
+@use "header";
+@use "footer";
+@use "page";
+@use "modal";
+@use "banner";
+@use "information";
+@use "foodpreview";
+@use "about";
+@use "themify-icons";
+@use "font-awesome.min";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');

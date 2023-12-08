@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div id="menu">
+        <p class="menu__success-notice"><%= notice %></p>
+
+        <h1 class="menu__heading">dinner menu</h1>
+
+        <div class="menu__items">
+          <% @pages.each do |page| %>
+            <%= render page %>
+          <% end %>
+        </div>
+
+        <p class="menu__disclaimer">*Items are served raw, or undercooked, or may contain raw or undercooked ingredients. Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase your risk of food-borne illness.</p>
+        <%= link_to "Add item", new_page_path, class: "menu__add-item-btn" %>
+      </div>
+    </div>
+  </div>
+</div>
+  
