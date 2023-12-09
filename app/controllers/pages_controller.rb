@@ -57,6 +57,31 @@ class PagesController < ApplicationController
     end
   end
 
+  def promotions
+    @promos = [
+      {
+        :image => "alex-haney-CAhjZmVk5H4-unsplash.jpg",
+        :title => "christmas eve & new years eve",
+        :description => ""
+      },
+      {
+        :image => "alex-haney-CAhjZmVk5H4-unsplash.jpg",
+        :title => "holiday lunch booking incentive",
+        :description => ""
+      },
+      {
+        :image => "pexels-adonyi-gábor-1407848.jpg",
+        :title => "tastemaker dinners",
+        :description => "You're invited to join us again in 2024 for a dinner series of legendary pairings. Continue to check back for our 2024 TasteMaker Dinner lineup."
+      },
+      {
+        :image => "jed-owen-q6Y8Xr3SoQA-unsplash-1920x1277.jpg",
+        :title => "classics menu",
+        :description => "Enjoy full 3 courses for one set price."
+      },
+    ]
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_page
