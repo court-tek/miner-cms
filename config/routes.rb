@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   # resource pages
   resources :pages, only: [:new, :show, :edit, :create, :update, :destroy]
 
+  # non resourcefull routes for admin
+  get "admin", to: 'admin#dashboard'
+  
   # Defines the pages path route ("/")
   get 'food', to: 'pages#index'
   get 'about', to: 'pages#about'
