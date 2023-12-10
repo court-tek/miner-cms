@@ -1,6 +1,6 @@
 class AdminController < ApplicationController
-    layout "landing"
-    
+    layout "admin"
+
     def dashboard
     end
 end
