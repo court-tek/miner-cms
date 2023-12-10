@@ -16,7 +16,14 @@
     }
 
     .menu__promotions-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
         margin-top: 2rem;
+
+        .card {
+            border: 1px solid var(--negro);
+        }
     }
     // .menu__about-grid {
     //     display: grid;
@@ -51,7 +58,9 @@
 // This applies from 768px onwards
 @media (min-width: 768px) {
    #menu {
-   
+    .menu__promotions-grid {
+        grid-template-columns: 1fr 1fr;
+    }
    }
 }
 // Large devices (desktops, 992px and up)
