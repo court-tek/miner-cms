@@ -23,6 +23,27 @@
 
         .card {
             border: 1px solid var(--negro);
+            .card__top {
+                a {
+                    img {
+                        max-width: 600px;
+                        width: 100%;
+                    }
+                }
+            }
+
+            .card__bottom {
+                padding: 20px;
+
+                .card__title {
+                    font-size: 1.4rem;
+                    text-transform: uppercase;
+                    color: var(--fito-red);
+                    font-weight: 700;
+                    cursor: pointer;
+                }
+            }
+
         }
     }
     // .menu__about-grid {
