@@ -1,0 +1,30 @@
+<div class="container">
+    <div id="menu">
+            <h1 class="menu__heading-sans">packages & promotions</h1>
+            <p class="menu__subheading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat dolore aspernatur molestiae, repudiandae non in esse explicabo quaerat, enim voluptates aliquam mollitia dolor facilis distinctio sequi eveniet ad similique suscipit!</p>
+            <div class="menu__promotions-grid">
+                <% @promos.each do |promo| %>
+                    <div class="card">
+                        <div class="card__top">
+                            <%= link_to "#" do %>
+                                <%= image_tag promo[:image] %>
+                            <% end %>
+                        </div>
+                        <div class="card__bottom spacing__bottom">
+                            <h2 class="card__title">
+                                <%= promo[:title] %>
+                            </h2>
+                            <p class="card__description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium architefugiat, dolor, veronecessitatibus tenetur repellendus sint nesciunt aut omnis.
+                            </p>
+                            <button class="card__promo-button">learn more</button>
+                        </div>
+                    </div>
+                <% end %>
+        </div>
+    </div>
+</div>
+
+
+
+                        

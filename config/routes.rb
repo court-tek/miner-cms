@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'food', to: 'pages#index'
   get 'about', to: 'pages#about'
   # get 'waitlist', to: 'pages#waitlist'
-  # get 'promotions', to: 'pages#promotions'
+  get 'promotions', to: 'pages#promotions'
   # get 'giftcards', to: 'pages#giftcards'
 
   # Defines the root path route ("/")
