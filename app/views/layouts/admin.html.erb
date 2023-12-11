@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Miner</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+  <body>
+      
+       <!-- ============================================================== -->
+    <!-- main wrapper -->
+    <!-- ============================================================== -->
+    <div class="dashboard-main-wrapper">
+        <!-- ============================================================== -->
+        <!-- navbar -->
+        <!-- ============================================================== -->
+        <div class="dashboard-header">
+            <%= render "shared/admin-header" %>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end navbar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- left sidebar -->
+        <!-- ============================================================== -->
+
+        <div class="nav-left-sidebar sidebar-dark">
+            <%= render "shared/admin-side-menu" %>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end left sidebar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- wrapper  -->
+        <!-- ============================================================== -->
+        <div class="dashboard-wrapper">
+            <%= yield %>
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <div class="footer">
+                <%= render "shared/admin-footer" %>
+            </div>
+            <!-- ============================================================== -->
+            <!-- end footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- end wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- end main wrapper  -->
+    <!-- ============================================================== -->
+    <!-- Optional JavaScript -->
+    <%= javascript_include_tag "bootstrap.bundle" %>
+    <%= javascript_include_tag "jquery-3.3.1.min" %>
+    <%= javascript_include_tag "jquery.slimscroll" %>
+    <%= javascript_include_tag "main-js" %>
+    <%= javascript_include_tag "chartist.min" %>
+    <%= javascript_include_tag "jquery.sparkline" %>
+    <%= javascript_include_tag "raphael.min" %>
+    <%= javascript_include_tag "morris" %>
+    <%= javascript_include_tag "c3.min" %>
+    <%= javascript_include_tag "d3-5.4.0.min" %>
+    <%= javascript_include_tag "C3chartjs" %>
+    <%= javascript_include_tag "dashboard-ecommerce" %>
+    <!-- jquery 3.3.1 -->
+    <!-- <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script> -->
+    <!-- bootstap bundle js -->
+    <!-- <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script> -->
+    <!-- slimscroll js -->
+    <!-- <script src="assets/vendor/slimscroll/jquery.slimscroll.js"></script> -->
+    <!-- main js -->
+    <!-- <script src="assets/libs/js/main-js.js"></script> -->
+    <!-- chart chartist js -->
+    <!-- <script src="assets/vendor/charts/chartist-bundle/chartist.min.js"></script> -->
+    <!-- sparkline js -->
+    <!-- <script src="assets/vendor/charts/sparkline/jquery.sparkline.js"></script> -->
+    <!-- morris js -->
+    <!-- <script src="assets/vendor/charts/morris-bundle/raphael.min.js"></script> -->
+    <!-- <script src="assets/vendor/charts/morris-bundle/morris.js"></script> -->
+    <!-- chart c3 js -->
+    <!-- <script src="assets/vendor/charts/c3charts/c3.min.js"></script> -->
+    <!-- <script src="assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script> -->
+    <!-- <script src="assets/vendor/charts/c3charts/C3chartjs.js"></script> -->
+    <!-- <script src="assets/libs/js/dashboard-ecommerce.js"></script> -->
+  </body>
+</html>
