@@ -2,6 +2,12 @@ Rails.application.routes.draw do
   # resource pages
   resources :pages, only: [:new, :show, :edit, :create, :update, :destroy]
 
+  # Defines the root paths for authentication
+  resource :registration, only: [:new, :create]
+  resource :session, only: [:new, :create, :destroy]
+  #  resource :password_reset, only: [:new, :create, :edit, :update]
+  #  resource :password, only: [:edit, :update]
+
   # non resourcefull routes for admin
   get "admin", to: 'admin#dashboard'
   
