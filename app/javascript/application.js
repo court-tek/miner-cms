@@ -2,5 +2,7 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 import "./src/header"
-// import "./src/modal"
+import "./src/bootstrap.bundle"
+import "./src/jquery-3.3.1.min"
+import "./src/jquery.slimscroll"
 import "./src/test"
