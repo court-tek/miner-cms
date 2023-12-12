@@ -25,9 +25,10 @@
             </div>
             <div class="card-footer bg-white p-0  ">
                 <div class="card-footer-item card-footer-item-bordered">
-                    <a href="#" class="footer-link">Create An Account</a></div>
+                    <%= link_to "Create An Account", new_registration_path, class: "footer-link" %>
+                </div>
                 <div class="card-footer-item card-footer-item-bordered">
-                    <a href="#" class="footer-link">Forgot Password</a>
+                    <%= link_to "Forgot Password", new_password_reset_path, class: "footer-link" %>
                 </div>
             </div>
         </div>
