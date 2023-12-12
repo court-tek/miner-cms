@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # Defines the root paths for authentication
   resource :registration, only: [:new, :create]
   resource :session, only: [:new, :create, :destroy]
-  #  resource :password_reset, only: [:new, :create, :edit, :update]
+  resource :password_reset, only: [:new, :create, :edit, :update]
   #  resource :password, only: [:edit, :update]
 
   # non resourcefull routes for admin
