@@ -62,10 +62,16 @@
                                 <div id="submenu-2" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/cards.html">food categories <span class="badge badge-secondary">New</span></a>
+                                            <%= link_to admin_food_categories_path, class: "nav-link" do %>
+                                                food categories
+                                                <span class="badge badge-secondary">New</span>
+                                            <% end %>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/cards.html">food items <span class="badge badge-secondary">New</span></a>
+                                            <%= link_to about_path, class: "nav-link" do %>
+                                                food items
+                                                <span class="badge badge-secondary">New</span>
+                                            <% end %>
                                         </li>
                                     </ul>
                                 </div>
