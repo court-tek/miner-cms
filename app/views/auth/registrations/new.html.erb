@@ -1,44 +1,45 @@
     <!-- ============================================================== -->
     <!-- signup form  -->
     <!-- ============================================================== -->
-    <form class="splash-container">
+    <%= form_with class: "splash-container" do |form| %>
         <div class="card">
             <div class="card-header">
-                <h3 class="mb-1">Registrations Form</h3>
-                <p>Please enter your user information.</p>
+                <h3 class="mb-1">Sign up</h3>
+                <p>Create an account.</p>
             </div>
             <div class="card-body">
                 <div class="form-group">
-                    <input class="form-control form-control-lg" type="text" name="nick" required="" placeholder="Username" autocomplete="off">
+                    <%= form.text_field :email, class: "form-control form-control-lg", name: "email", required: "", placeholder: "E-mail", autocomplete: "off" %>
                 </div>
                 <div class="form-group">
-                    <input class="form-control form-control-lg" type="email" name="email" required="" placeholder="E-mail" autocomplete="off">
+                    <%= form.text_field :username, class: "form-control form-control-lg", name: "username", required: "", placeholder: "Username", autocomplete: "off" %>
                 </div>
                 <div class="form-group">
-                    <input class="form-control form-control-lg" id="pass1" type="password" required="" placeholder="Password">
+                    <%= form.password_field :password, class: "form-control form-control-lg", id: "pass1", placeholder: "Password", autocomplete: "off" %>
                 </div>
                 <div class="form-group">
-                    <input class="form-control form-control-lg" required="" placeholder="Confirm">
+                    <%= form.password_field :password_confirmation, class: "form-control form-control-lg", placeholder: "Confirm password", autocomplete: "off" %>
                 </div>
                 <div class="form-group pt-2">
-                    <button class="btn btn-block btn-primary" type="submit">Register My Account</button>
+                    <%= form.button "Register My Account", class: "btn btn-block btn-primary", type: "submit" %>
                 </div>
                 <div class="form-group">
                     <label class="custom-control custom-checkbox">
-                        <input class="custom-control-input" type="checkbox"><span class="custom-control-label">By creating an account, you agree the <a href="#">terms and conditions</a></span>
+                        <%= form.check_box :terms_conditions, class: "custom-control-input" %><span class="custom-control-label">By creating an account, you agree the <a href="#">terms and conditions</a></span>
                     </label>
                 </div>
                 <div class="form-group row pt-0">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
-                        <button class="btn btn-block btn-social btn-facebook " type="button">Facebook</button>
+                        <%= form.button "Facebook", class: "btn btn-block btn-social btn-facebook", type: "submit" %>
                     </div>
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <button class="btn  btn-block btn-social btn-twitter" type="button">Twitter</button>
+                        <button class="btn btn-block btn-social btn-twitter" type="button">Twitter</button>
+                        <%= form.button "Twitter", class: "btn btn-block btn-social btn-twitter", type: "submit" %>
                     </div>
                 </div>
             </div>
             <div class="card-footer bg-white">
-                <p>Already member? <%= link_to "Login Here", new_session_path, class: "text-secondary" %></p>
+                <p>Already member? <%= link_to "Login Here", new_auth_session_path, class: "text-secondary" %></p>
             </div>
         </div>
-    </form>
+    <% end %>
