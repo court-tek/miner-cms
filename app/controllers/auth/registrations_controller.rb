@@ -1,5 +1,5 @@
-class RegistrationsController < ApplicationController
-  layout 'auth'
+class Auth::RegistrationsController < ApplicationController
+    layout 'auth'
   
   def new
   end

@@ -1,20 +1,23 @@
 Rails.application.routes.draw do
-  # resource pages
+  # Defines the paths for pages
   resources :pages, only: [:new, :show, :edit, :create, :update, :destroy]
   
   # Defines the paths for authentication
-  resource :registration, only: [:new, :create]
-  resource :session, only: [:new, :create, :destroy]
-  resource :password_reset, only: [:new, :create, :edit, :update]
-  # resources :password, only: [:edit, :update]
+  namespace :auth do 
+    resource :registration, only: [:new, :create]
+    resource :session, only: [:new, :create, :destroy]
+    resource :password_reset, only: [:new, :create, :edit, :update]
+    # resources :password, only: [:edit, :update]
+  end
   
-  # non resourcefull routes for admin
+  # Defines the paths for non resourcefull routes for admin
   namespace :admin do 
     get 'dashboard', to: 'dashboard#index'
     get 'food_categories', to: 'food_categories#index'
     get 'food_categories/new', to: 'food_categories#new'
     get 'food_categories/edit', to: 'food_categories#edit'
   end
+
   # Defines the pages path route ("/")
   get 'food', to: 'pages#index'
   get 'about', to: 'pages#about'
