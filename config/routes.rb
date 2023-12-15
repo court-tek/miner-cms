@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   namespace :admin do 
     get 'dashboard', to: 'dashboard#index'
     get 'food_categories', to: 'food_categories#index'
+    get 'food_categories/new', to: 'food_categories#new'
   end
   # Defines the pages path route ("/")
   get 'food', to: 'pages#index'
