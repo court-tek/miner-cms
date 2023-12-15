@@ -5,13 +5,14 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">New Food Category </h2>
+                            <h2 class="pageheader-title">Edit Food Category </h2>
                             <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><%= link_to "Dashboard", admin_dashboard_path, class: "breadcrumb-link" %></li>
-                                        <li class="breadcrumb-item active" aria-current="page">New Food Category </li>
+                                        <li class="breadcrumb-item"><%= link_to "All Food Categories", admin_food_categories_path, class: "breadcrumb-link" %></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Edit Food Category </li>
                                     </ol>
                                 </nav>
                             </div>
@@ -27,7 +28,7 @@
                         <!-- ============================================================== -->
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                             <div class="card">
-                                <h5 class="card-header">Create New Category</h5>
+                                <h5 class="card-header">Edit New Category</h5>
                                 <div class="card-body">
                                     <%= render "form" %>
                                 </div>

@@ -5,13 +5,13 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">General Tables </h2>
+                            <h2 class="pageheader-title">All Food Categories </h2>
                             <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><%= link_to "Dashboard", admin_dashboard_path, class: "breadcrumb-link" %></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Food Categories</li>
+                                        <li class="breadcrumb-item active" aria-current="page">All Food Categories</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -27,7 +27,7 @@
                         <!-- ============================================================== -->
                         <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
                             <div class="card">
-                                <h5 class="card-header">Responsive Table</h5>
+                                <h5 class="card-header">All Food Categories</h5>
                                 <div class="card-body">
                                     <div class="table-responsive ">
                                         <table class="table">
@@ -47,7 +47,11 @@
                                                     <td>appetizers</td>
                                                     <td>Start your Ruth's Chris experience...</td>
                                                     <td>12/02/2023</td>
-                                                    <td><i class="fas fa-edit"></i></td>
+                                                    <td>
+                                                        <%= link_to admin_food_categories_edit_path do %>
+                                                            <i class="fas fa-edit"></i>
+                                                        <% end %>
+                                                    </td>
                                                     <td><i class="fas fa-trash"></i></td>
                                                 </tr>
                                             </tbody>

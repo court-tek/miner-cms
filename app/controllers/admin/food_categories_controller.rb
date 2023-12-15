@@ -8,4 +8,8 @@ class Admin::FoodCategoriesController < ApplicationController
     def new 
       @message_new = "This page creates an option!"
     end
+
+    def edit 
+      @message_new = "This page creates an edit option!"
+    end
 end
