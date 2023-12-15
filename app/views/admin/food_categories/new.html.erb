@@ -27,42 +27,23 @@
                         <!-- ============================================================== -->
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                             <div class="card">
-                                <h5 class="card-header">Basic Form</h5>
+                                <h5 class="card-header">Create New Category</h5>
                                 <div class="card-body">
                                     <%= form_with do |form| %>
                                         <div class="form-group">
-                                            <%= form.label "Title", for: "inputTitle" %>
-                                            <%= form.text_field :title, id: "inputTitle", name: "name", data_parsley_trigger: "change", required: "", placeholder: "Enter title", autocomplete: "off", class: "form-control" %>
-                                        </div>
-                                    <% end %>
-                                    <form action="#" id="basicform" data-parsley-validate="">
-                                        <div class="form-group">
-                                            <label for="inputUserName">User Name</label>
-                                            <input id="inputUserName" type="text" name="name" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputEmail">Email address</label>
-                                            <input id="inputEmail" type="email" name="email" data-parsley-trigger="change" required="" placeholder="Enter email" autocomplete="off" class="form-control">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputPassword">Password</label>
-                                            <input id="inputPassword" type="password" placeholder="Password" required="" class="form-control">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputRepeatPassword">Repeat Password</label>
-                                            <input id="inputRepeatPassword" data-parsley-equalto="#inputPassword" type="password" required="" placeholder="Password" class="form-control">
+                                            <%= form.label "Category Title", for: "inputCategoryTitle" %>
+                                            <%= form.text_field :title, id: "inputCategoryTitle", name: "category", data_parsley_trigger: "change", required: "", placeholder: "Enter category title", autocomplete: "off", class: "form-control" %>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
-                                                
                                             </div>
                                             <div class="col-sm-6 pl-0">
                                                 <p class="text-right">
-                                                    <button type="submit" class="btn btn-space btn-primary">Submit</button>
+                                                    <%= form.button "Submit", type: "submit", class: "btn btn-space btn-primary" %>
                                                 </p>
                                             </div>
                                         </div>
-                                    </form>
+                                    <% end %>
                                 </div>
                             </div>
                         </div>
