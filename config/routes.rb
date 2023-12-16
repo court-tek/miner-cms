@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     get 'food_categories', to: 'food_categories#index'
     get 'food_categories/new', to: 'food_categories#new'
     get 'food_categories/edit', to: 'food_categories#edit'
+    resources :food_items
   end
 
   # Defines the pages path route ("/")

@@ -1,0 +1,71 @@
+<div class="container-fluid  dashboard-content">
+    <!-- ============================================================== -->
+    <!-- pageheader -->
+    <!-- ============================================================== -->
+    <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="page-header">
+                <h2 class="pageheader-title">All Food Items</h2>
+                <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
+                <div class="page-breadcrumb">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><%= link_to "Dashboard", admin_dashboard_path, class: "breadcrumb-link" %></li>
+                            <li class="breadcrumb-item active" aria-current="page">All Food Items</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- end pageheader -->
+    <!-- ============================================================== -->
+    <div class="row">
+        <!-- ============================================================== -->
+        <!-- responsive table -->
+        <!-- ============================================================== -->
+        <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+            <div class="card">
+                <h5 class="card-header">All Food Categories</h5>
+                <div class="card-body">
+                    <div class="table-responsive ">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Title</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Date Created</th>
+                                    <th scope="col">Edit</th>
+                                    <th scope="col">Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% @items.each do |item| %>
+                                    <tr>
+                                        <th scope="row"><%= item.id %></th>
+                                        <td><%= item.item_title %></td>
+                                        <td><%= item.item_description.first(25) %>...</td>
+                                        <td>12/02/2023</td>
+                                        <td>
+                                            <%= link_to item do %>
+                                                <i class="fas fa-edit"></i>
+                                            <% end %>
+                                        </td>
+                                        <td>
+                                            <%= link_to "delete", @items, method: :delete %>
+                                        </td>
+                                    </tr>
+                                <% end %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end responsive table -->
+        <!-- ============================================================== -->
+    </div>
+</div>  
