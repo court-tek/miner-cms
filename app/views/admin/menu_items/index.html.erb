@@ -8,6 +8,9 @@
     <p>
       <%= link_to "Show this menu item", admin_menu_item %>
     </p>
+    <p>
+      <%= button_to "delete", admin_menu_item_path(admin_menu_item), method: :delete %>
+    </p>
   <% end %>
 </div>
 

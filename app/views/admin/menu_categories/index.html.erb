@@ -51,12 +51,14 @@
                                         <td><%= category.description.first(10)%>...</td>
                                         <td><%= category.created_at %></td>
                                         <td>
-                                          <%= link_to "Edit", edit_admin_menu_category_path(category) do %>
+                                          <%= link_to edit_admin_menu_category_path(category) do %>
                                             <i class="ti-pencil-alt"></i>
                                           <% end %>
                                         </td>
                                         <td>
-                                          <%= link_to "Delete", category, method: :delete %>
+                                          <%= button_to admin_menu_category_path(category), method: :delete, class: "btn btn-link" do %>
+                                            <i class="ti-trash"></i>
+                                          <% end %>
                                         </td>
                                     </tr>
                                   <% end %>

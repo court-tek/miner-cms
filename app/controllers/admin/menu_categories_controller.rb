@@ -1,6 +1,6 @@
 class Admin::MenuCategoriesController < ApplicationController
   layout 'admin'
-  before_action :set_admin_menu_category, only: %i[ show edit update destroy ]
+  before_action :set_admin_menu_category, only: %i[ edit update destroy ]
 
   # GET /admin/menu_categories or /admin/menu_categories.json
   def index
