@@ -52,7 +52,7 @@
                                         <td><%= category.description.first(10)%>...</td>
                                         <td><%= category.created_at %></td>
                                         <td>
-                                          <%= link_to "Edit", category %>
+                                          <%= link_to "Edit", edit_admin_menu_category_path(category) %>
                                         </td>
                                         <td>
                                           <%= link_to "Delete", category, method: :delete %>
