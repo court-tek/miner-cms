@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   namespace :admin do
-    resources :menu_items
-    resources :menu_categories
+    resources :dashboard, only: [:index]
+    resources :menu_categories, only: [:index, :new, :edit, :create, :update, :destroy]
+    resources :menu_items, only: [:index, :new, :edit, :create, :update, :destroy]
   end
   # resource pages
   resources :pages, only: [:new, :show, :edit, :create, :update, :destroy]
