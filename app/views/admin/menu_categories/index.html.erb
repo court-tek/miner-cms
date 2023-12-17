@@ -1,5 +1,4 @@
-
-  <div class="container-fluid  dashboard-content">
+<div class="container-fluid  dashboard-content">
       <!-- ============================================================== -->
       <!-- pageheader -->
       <!-- ============================================================== -->
@@ -31,7 +30,8 @@
               <div class="card">
                   <h5 class="card-header">Menu Categories</h5>
                   <div class="card-body">
-                      <div class="table-responsive ">
+                    <h6 class="card-text" style="color: green"><%= notice %></h6>
+                    <div class="table-responsive ">
                           <table class="table">
                               <thead>
                                   <tr>
@@ -51,7 +51,9 @@
                                         <td><%= category.description.first(10)%>...</td>
                                         <td><%= category.created_at %></td>
                                         <td>
-                                          <%= link_to "Edit", edit_admin_menu_category_path(category) %>
+                                          <%= link_to "Edit", edit_admin_menu_category_path(category) do %>
+                                            <i class="ti-pencil-alt"></i>
+                                          <% end %>
                                         </td>
                                         <td>
                                           <%= link_to "Delete", category, method: :delete %>
@@ -74,4 +76,4 @@
           <%= link_to "Create New Category", new_admin_menu_category_path, class: "btn btn-primary btn-lg" %>
         </div>
       </div>     
-  </div>
+</div>

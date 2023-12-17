@@ -39,7 +39,7 @@ class Admin::MenuCategoriesController < ApplicationController
   def update
     respond_to do |format|
       if @admin_menu_category.update(admin_menu_category_params)
-        format.html { redirect_to admin_menu_category_url(@admin_menu_category), notice: "Menu category was successfully updated." }
+        format.html { redirect_to admin_menu_categories_path, notice: "Menu category was successfully updated." }
         format.json { render :show, status: :ok, location: @admin_menu_category }
       else
         format.html { render :edit, status: :unprocessable_entity }

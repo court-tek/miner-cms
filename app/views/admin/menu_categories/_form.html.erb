@@ -1,27 +1,32 @@
-<%= form_with(model: admin_menu_category) do |form| %>
-  <% if admin_menu_category.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(admin_menu_category.errors.count, "error") %> prohibited this admin_menu_category from being saved:</h2>
+<%= form_with(model: admin_menu_category, html: {id: "basicform"}) do |form| %>
+            <% if admin_menu_category.errors.any? %>
+              <div style="color: red">
+                <h2><%= pluralize(admin_menu_category.errors.count, "error") %> prohibited this admin_menu_category from being saved:</h2>
 
-      <ul>
-        <% admin_menu_category.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+                <ul>
+                  <% admin_menu_category.errors.each do |error| %>
+                    <li><%= error.full_message %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
-  </div>
+            <div class="form-group">
+              <%= form.label :title, for: "inputTitle" %>
+              <%= form.text_field :title, id: "inputTitle", data_parsley_trigger: "change", required: "", placeholder: "Enter Title", autocomplete: "off", class: "form-control" %>
+            </div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
-  </div>
+            <div class="form-group">
+              <%= form.label :description, for: "inputDescription" %>
+              <%= form.text_field :description, id: "inputDescription", data_parsley_trigger:"change", required: "", placeholder: "Enter Description", autocomplete: "off", class: "form-control" %>
+            </div>
 
-  <div>
-    <%= form.submit %>
-  </div>
+            <div class="row">
+              <div class="col-sm-6">
+                  <p class="text-left">
+                    <%= form.submit "Update Menu Category", class: "btn btn-space btn-primary" %>
+                  </p>
+              </div>
+            </div>
 <% end %>
+
