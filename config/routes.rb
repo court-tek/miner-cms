@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :menu_items
+    resources :menu_categories
+  end
   # resource pages
   resources :pages, only: [:new, :show, :edit, :create, :update, :destroy]
 
@@ -9,7 +13,6 @@ Rails.application.routes.draw do
   #  resource :password, only: [:edit, :update]
 
   # non resourcefull routes for admin
-  get "admin", to: 'admin#dashboard'
   
   # Defines the pages path route ("/")
   get 'food', to: 'pages#index'

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Menu items</h1>
+
+<div id="admin_menu_items">
+  <% @admin_menu_items.each do |admin_menu_item| %>
+    <%= render admin_menu_item %>
+    <p>
+      <%= link_to "Show this menu item", admin_menu_item %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New menu item", new_admin_menu_item_path %>
