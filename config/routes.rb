@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
+  # Defines the resource paths for admin sections
   namespace :admin do
     resources :dashboard, only: [:index]
     resources :menu_categories, only: [:index, :new, :edit, :create, :update, :destroy]
-    resources :menu_items
+    resources :menu_items, only: [:index, :new, :edit, :create, :update, :destroy]
   end
-  # resource pages
+  
+  # Defines the resource paths for pages
   resources :pages, only: [:new, :show, :edit, :create, :update, :destroy]
 
-  # Defines the root paths for authentication
+  # Defines the paths for authentication
   resource :registration, only: [:new, :create]
   resource :session, only: [:new, :create, :destroy]
   #  resource :password_reset, only: [:new, :create, :edit, :update]
