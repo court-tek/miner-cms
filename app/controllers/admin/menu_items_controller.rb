@@ -26,7 +26,7 @@ class Admin::MenuItemsController < ApplicationController
 
     respond_to do |format|
       if @admin_menu_item.save
-        format.html { redirect_to admin_menu_item_url(@admin_menu_item), notice: "Menu item was successfully created." }
+        format.html { redirect_to admin_menu_items_path, notice: "Menu item was successfully created." }
         format.json { render :show, status: :created, location: @admin_menu_item }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +39,7 @@ class Admin::MenuItemsController < ApplicationController
   def update
     respond_to do |format|
       if @admin_menu_item.update(admin_menu_item_params)
-        format.html { redirect_to admin_menu_item_url(@admin_menu_item), notice: "Menu item was successfully updated." }
+        format.html { redirect_to admin_menu_items_path, notice: "Menu item was successfully updated." }
         format.json { render :show, status: :ok, location: @admin_menu_item }
       else
         format.html { render :edit, status: :unprocessable_entity }
