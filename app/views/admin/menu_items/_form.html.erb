@@ -1,0 +1,36 @@
+<%= form_with(model: admin_menu_item) do |form| %>
+  <% if admin_menu_item.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(admin_menu_item.errors.count, "error") %> prohibited this admin_menu_item from being saved:</h2>
+
+      <ul>
+        <% admin_menu_item.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :title, for: "inputTitle" %>
+    <%= form.text_field :title, id: "inputTitle", data_parsley_trigger: "change", required: "", placeholder: "Enter Title", autocomplete: "off", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :description, for: "inputDescription" %>
+    <%= form.text_field :description, id: "inputDescription", data_parsley_trigger:"change", required: "", placeholder: "Enter Description", autocomplete: "off", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :image, for: "inputImage" %>
+    <%= form.text_field :image, id: "inputImage", data_parsley_trigger:"change", required: "", placeholder: "Enter Image Link", autocomplete: "off", class: "form-control" %>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+        <p class="text-left">
+          <%= form.submit(@admin_menu_item.new_record? ? "Create New Item" : "Update Menu Item", class: "btn btn-space btn-primary") %>
+        </p>
+    </div>
+  </div>
+<% end %>

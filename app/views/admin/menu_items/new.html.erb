@@ -1,0 +1,41 @@
+<div class="container-fluid  dashboard-content">
+  <!-- ============================================================== -->
+  <!-- pageheader -->
+  <!-- ============================================================== -->
+  <div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="page-header">
+            <h2 class="pageheader-title">New Menu Item</h2>
+            <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
+            <div class="page-breadcrumb">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><%= link_to "Dashboard", admin_dashboard_index_path, class: "breadcrunmb-link" %></li>
+                        <li class="breadcrumb-item"><%= link_to "All Food Items", admin_menu_items_path, class: "breadcrunmb-link" %></li>
+                        <li class="breadcrumb-item active" aria-current="page">New Menu category</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- ============================================================== -->
+  <!-- end pageheader -->
+  <!-- ============================================================== -->
+  <div class="row">
+   <!-- ============================================================== -->
+   <!-- basic form -->
+   <!-- ============================================================== -->
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <div class="card">
+        <h5 class="card-header">New Menu Item</h5>
+        <div class="card-body">      
+          <%= render "form", admin_menu_item: @admin_menu_item %>
+        </div>
+      </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- end basic form -->
+    <!-- ============================================================== -->
+  </div>
+</div>
